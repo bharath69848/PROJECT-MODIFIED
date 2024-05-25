@@ -36,7 +36,9 @@ input_style = """
 """
 st.markdown(input_style, unsafe_allow_html=True)
 
-client = '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'
+client = Groq(
+    api_key=st.secrets["GROQ_API_KEY"],
+)
 
 # Initialize chat history and selected model
 if "messages" not in st.session_state:
